@@ -3,8 +3,7 @@ const withPlugins = require('next-compose-plugins');
 const nextConfig = {
   // distDir: '../../dist/functions/next'
   images: {
-    loader: 'custom',
-    loaderFile: './src/utils/imageLoader.js',
+    domains: ['pbs.twimg.com'],
   },
 };
 
