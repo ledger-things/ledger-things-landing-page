@@ -23,9 +23,8 @@ const Agency = () => {
         {/* Start agency head section */}
         <Head>
           <title>Ledger Things</title>
-          <meta name="Description" content="ledger things landing page" />
+          <meta name="Description" content="We are a software house specialized in fintech and blockchain solutions with a blockchain-agnostic approach." />
           <meta name="theme-color" content="#aa251d" />
-
           {/* Load google fonts */}
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"

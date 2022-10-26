@@ -76,7 +76,7 @@ const data = {
       icon: <TapeIcon />,
       title: 'NFTs',
       description:
-        'Design, development and auditing of Smart Contracts for help you turn any kind of real-world asset or domain-specific business into Non-Fungible Cryptographic Tokens including real estate.',
+        'Design, development and auditing of Smart Contracts for help you turn any kind of real-world asset or domain-specific business into Non-Fungible Cryptographic Tokens including real estate and collectibles.',
     },
     
     {
@@ -84,7 +84,7 @@ const data = {
       icon: <DemogIcon/>,
       title: 'DeFi',
       description:
-        'We develop Dapp and Smart Contracts that use existing Blockchain to improve data security and traceability.',
+        'As a DeFi development company, we design and develop a range of DeFi products for startups, scale-ups and enterprises to help them gain an edge in the competitive DeFi landscape.',
     },
     {
       id: 2,
@@ -98,14 +98,14 @@ const data = {
       icon: <FlashIcon  />,
       title: 'Smart Contract Auditing',
       description:
-        'We help you restore the chain of trust, right down to the final consumer.',
+        'We audit the provided source code to find and attempt to exploit security vulnerabilities that may allow attackers to seize control of deployed contracts, steal funds, or disrupt services, among others.',
     },
     {
       id: 5,
       icon: <BicycleIcon/>,
       title: 'Dapp',
       description:
-        'We are well capable of developing secure and scalable decentralized applications.',
+        'We are well capable of developing secure and scalable decentralized Web3 applications.',
     },
   ],
   qualityFeature: [
