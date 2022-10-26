@@ -24,9 +24,9 @@ const FeatureSection = ({
     <FeatureSectionWrapper id="featureSection">
       <Container>
         <Box {...sectionHeader}>
-          <Text content="OUR SERVICES" {...sectionSubTitle} />
+          <Text content="WE BUILD BLOCKCHAIN ECOSYSTEM" {...sectionSubTitle} />
           <Heading
-            content="Featured Service that We Provide"
+            content="Great tech can solve the unsolvable and it can change the world for the better"
             {...sectionTitle}
           />
         </Box>
