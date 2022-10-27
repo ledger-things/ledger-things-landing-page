@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/150b5c90-b38e-4caa-93f0-909272335e71/deploy-status)](https://app.netlify.com/sites/inquisitive-tartufo-e5ef32/deploys)
+
 # Installation
 
 ```
