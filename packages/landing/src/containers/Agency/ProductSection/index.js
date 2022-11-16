@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import Box from 'common/components/Box';
@@ -11,33 +11,38 @@ import Container from 'common/components/UI/Container';
 import QualitySectionWrapper from './qualitySection.style';
 
 import data from 'common/data/Agency';
+import Button from 'common/components/Button';
 
-import FeatureImage from 'common/assets/image/agency/carousel/m-1.png';
 
-const QualitySection = ({
+const ProductSection = ({
+  id,
   row,
   col,
   title,
   featureCol,
   description,
+  subDescription,
   textArea,
   imageArea,
   imageAreaRow,
   imageWrapper,
+  featureName,
+  featureImage,
+  link,
   featureTitle,
   featureDescription,
   iconStyle,
 }) => {
   return (
-    <QualitySectionWrapper id="qualitySection">
+    <QualitySectionWrapper id={id}>
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col} {...textArea}>
             <FeatureBlock
               title={
                 <Heading
-                style={{fontWeight:500}}
-                  content="Quality Ledger"
+                style={{fontWeight:500,color:"#aa251d"}}
+                  content={title}
                   {...title}
                 />
               }
@@ -46,8 +51,8 @@ const QualitySection = ({
                   <h3
                     style={{fontWeight:500,color:'#0f2137',margin:0}}
 
-              >The blockchain doesn't lie</h3><Text
-              content="Certificate your products and supply chain on Kadena blockchain"
+              >{description}</h3><Text
+              content={subDescription}
               {...description}
             /></div>
               }
@@ -55,7 +60,7 @@ const QualitySection = ({
           </Box>
         </Box>
         <Box className="row" {...row} {...textArea}>
-          {data.qualityFeature.map((feature, index) => (
+          {data?.[featureName].map((feature, index) => (
             <Box
               className="col"
               {...featureCol}
@@ -72,6 +77,15 @@ const QualitySection = ({
               />
             </Box>
           ))}
+          {link &&          
+                <Fragment>
+                    <Button
+                      title="SEE OUR WEBSITE"
+                      variant="textButton"
+                      icon={<i className="flaticon-next" />}
+                      onClick={()=>window.open(link,'_blank')}
+                    />
+                </Fragment>}
         </Box>
       </Container>
       <Container fluid noGutter className="info-sec-container">
@@ -79,7 +93,7 @@ const QualitySection = ({
           <Box className="col" {...col} {...imageArea}>
             <Card {...imageWrapper}>
               <Fade right delay={90}>
-                <NextImage src={FeatureImage} alt="Feature Image" />
+                <NextImage src={featureImage} alt={title}/>
               </Fade>
             </Card>
           </Box>
@@ -89,7 +103,7 @@ const QualitySection = ({
   );
 };
 
-QualitySection.propTypes = {
+ProductSection.propTypes = {
   row: PropTypes.object,
   col: PropTypes.object,
   featureCol: PropTypes.object,
@@ -98,7 +112,7 @@ QualitySection.propTypes = {
   button: PropTypes.object,
 };
 
-QualitySection.defaultProps = {
+ProductSection.defaultProps = {
   // Quality section row default style
   row: {
     flexBox: true,
@@ -184,4 +198,4 @@ QualitySection.defaultProps = {
   },
 };
 
-export default QualitySection;
+export default ProductSection;

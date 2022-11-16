@@ -26,7 +26,17 @@ const data = {
     },
     {
       label: 'Quality Ledger',
-      path: '#qualitySection',
+      path: '#qualityLedger',
+      offset: '67',
+    },
+    {
+      label: 'SK Reputation',
+      path: '#skreputation',
+      offset: '67',
+    },
+    {
+      label: '3D Rendering',
+      path: '#rendering3d',
       offset: '67',
     },
     {
@@ -136,6 +146,66 @@ const data = {
       title: 'Certification',
       description:
         'Certify your production process with transparency and safety.',
+    },
+  ],
+  skReputationFeature: [
+    {
+      id: 1,
+      icon: 'flaticon-flask',
+      title: 'Quick Deletion of Harmful Materials',
+      description:
+        'Removal of online articles, videos, images, reviews, personal informations and links deletion.',
+    },
+    {
+      id: 2,
+      icon: 'flaticon-pencil-case',
+      title: 'Improving digital reputation',
+      description:
+        'Monitoring, Analyzing and improving digital reputation through sophisticated performance analysis.',
+    },
+    {
+      id: 3,
+      icon: 'flaticon-ruler',
+      title: 'Removal fake reviews',
+      description:
+        ' Removal of all fake reviews. service created to give support to companies or people who safeguard their reputation from defamatory reviews.',
+    },
+    {
+      id: 4,
+      icon: 'flaticon-briefing',
+      title: 'Our Customers',
+      description:
+        'Everyone can request SKReputation services, from private individuals to entrepreneurs, public figures and politicians.',
+    },
+  ],
+  architectureRenderingFeature: [
+    {
+      id: 1,
+      icon: 'flaticon-flask',
+      title: '3D Visualization',
+      description:
+        ' We bring unbuilt architecture in life using our extensive experience and cutting edge 3D visualization technology. Exteriors, interiors, VR experiences - what you can imagine, can be visualized.',
+    },
+    {
+      id: 2,
+      icon: 'flaticon-pencil-case',
+      title: 'We just need a project',
+      description:
+        'Just give us the project of your architect to build the 3D rendering.',
+    },
+    {
+      id: 3,
+      icon: 'flaticon-ruler',
+      title: 'Customized',
+      description:
+        'Quick and customized service for every customer. Tell us what you want and we’ll make your every 3D wish.',
+    },
+    {
+      id: 4,
+      icon: 'flaticon-briefing',
+      title: 'Always Available',
+      description:
+        'We are always available to release periodic reports of your solution.',
     },
   ],
   blog: [

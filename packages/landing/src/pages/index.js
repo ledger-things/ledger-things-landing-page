@@ -11,10 +11,15 @@ import FeatureSection from 'containers/Agency/FeatureSection';
 import WorkHistory from 'containers/Agency/WorkHistory';
 import TeamSection from 'containers/Agency/TeamSection';
 import NewsletterSection from 'containers/Agency/NewsletterSection';
-import QualitySection from 'containers/Agency/QualitySection';
+import ProductSection from 'containers/Agency/ProductSection';
 import Footer from 'containers/Agency/Footer';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 import FaqSection from 'containers/Agency/FaqSection';
+import FeatureImage from '../common/assets/image/agency/carousel/m-1.png';
+import SKReputationImage from '../common/assets/image/agency/product/skreputation-image.webp';
+import Architecture3DImage from '../common/assets/image/agency/product/architecture3DImage.jpg';
+
+
 
 const Agency = () => {
   return (
@@ -44,7 +49,31 @@ const Agency = () => {
           <BannerSection />
           <FeatureSection />
           <WorkHistory />
-          <QualitySection />
+          <ProductSection 
+                id="qualityLedger"
+                title="Quality Ledger" 
+                description="“The blockchain doesn't lie”" 
+                subDescription="Certificate your products and supply chain on Kadena blockchain"
+                featureName="qualityFeature"
+                featureImage={FeatureImage}
+                />
+          <ProductSection 
+                id="skreputation"
+                title="SK Reputation" 
+                description="“I’m stealthy, like a ninja.”" 
+                subDescription="Defend and improve your digital reputation"
+                featureName="skReputationFeature"
+                featureImage={SKReputationImage}
+                link="https://www.skreputation.com/"
+                />
+          <ProductSection 
+                id="rendering3d"
+                title="Architecture 3D Rendering" 
+                description="“Why are you keeping this curiosity door locked?”" 
+                subDescription="3D Architectural Rendering of any kind of construction or structure."
+                featureName="architectureRenderingFeature"
+                featureImage={Architecture3DImage}
+                />
           <TeamSection />
           <FaqSection />
           <NewsletterSection />
