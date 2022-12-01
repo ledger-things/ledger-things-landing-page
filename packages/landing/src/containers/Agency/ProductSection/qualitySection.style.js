@@ -20,9 +20,20 @@ const QualitySectionWrapper = styled.section`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    
     @media only screen and (max-width: 991px) {
-      display: none;
+      position: relative;
+      top:0;
+      transform:translate(-50%,0%);
+    }
+  }
+
+  .info-sec-center {
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      width:100%;
+      align-items: center;
+      justify-content: center;
     }
   }
 

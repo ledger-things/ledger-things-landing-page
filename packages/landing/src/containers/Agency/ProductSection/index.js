@@ -28,11 +28,13 @@ const ProductSection = ({
   imageWrapper,
   featureName,
   featureImage,
+  featureVideo,
   link,
   featureTitle,
   featureDescription,
   iconStyle,
 }) => {
+
   return (
     <QualitySectionWrapper id={id}>
       <Container>
@@ -88,9 +90,10 @@ const ProductSection = ({
                 </Fragment>}
         </Box>
       </Container>
+    {featureImage &&      
       <Container fluid noGutter className="info-sec-container">
         <Box className="row" {...row} {...imageAreaRow}>
-          <Box className="col" {...col} {...imageArea}>
+          <Box className="col info-sec-center" {...col} {...imageArea}>
             <Card {...imageWrapper}>
               <Fade right delay={90}>
                 <NextImage src={featureImage} alt={title}/>
@@ -98,7 +101,23 @@ const ProductSection = ({
             </Card>
           </Box>
         </Box>
-      </Container>
+      </Container>}
+    {featureVideo?.length > 0 &&      
+      <Container fluid noGutter className="info-sec-container" >
+        <Box className="row" {...row} {...imageAreaRow}>
+          <Box className="col info-sec-center" {...col} {...imageArea}>
+            <Card {...imageWrapper}>
+              <Fade right delay={90}>
+                  <video width="100%" height="300" autoPlay muted loop >
+                    <source src={featureVideo[1]} type="video/mp4" />
+                    <source src={featureVideo[0]} type="video/webm" />
+                      Your browser does not support the video tag.
+                  </video>
+              </Fade>
+            </Card>
+          </Box>
+        </Box>
+      </Container>}
     </QualitySectionWrapper>
   );
 };

@@ -17,9 +17,9 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 import FaqSection from 'containers/Agency/FaqSection';
 import FeatureImage from '../common/assets/image/agency/carousel/m-1.png';
 import SKReputationImage from '../common/assets/image/agency/product/skreputation-image.webp';
-import Architecture3DImage from '../common/assets/image/agency/product/architecture3DImage.jpg';
 
-
+const Architecture3DVideoMp4 = "video/video-a3r.mp4"
+const Architecture3DVideoWebm = "video/video-a3r.webm"
 
 const Agency = () => {
   return (
@@ -72,7 +72,8 @@ const Agency = () => {
                 description="“Why are you keeping this curiosity door locked?”" 
                 subDescription="3D Architectural Rendering of any kind of construction or structure."
                 featureName="architectureRenderingFeature"
-                featureImage={Architecture3DImage}
+                featureVideo ={[Architecture3DVideoMp4,
+                  Architecture3DVideoWebm]}
                 />
           <TeamSection />
           <FaqSection />
