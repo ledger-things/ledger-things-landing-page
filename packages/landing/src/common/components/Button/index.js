@@ -15,6 +15,7 @@ const Button = ({
   isMaterial,
   isLoading,
   className,
+  isUnderlined,
   ...props
 }) => {
   // Add all classs to an array
@@ -48,6 +49,11 @@ const Button = ({
   // set icon position
   const position = iconPosition || 'right';
 
+  const underlinedStyle = {
+    textDecoration:'underline',
+    textUnderlinePosition: 'under'
+  }
+
   return (
     <ButtonStyle
       type={type}
@@ -59,7 +65,7 @@ const Button = ({
       {...props}
     >
       {position === 'left' && buttonIcon}
-      {title && <span className="btn-text">{title}</span>}
+      {title && <span style={isUnderlined && underlinedStyle} className="btn-text">{title}</span>}
       {position === 'right' && buttonIcon}
     </ButtonStyle>
   );
@@ -83,6 +89,9 @@ Button.propTypes = {
 
   /** Button Loading state */
   isLoading: PropTypes.bool,
+
+  /** Button text Underlined */
+  isUnderlined: PropTypes.bool,
 
   /** Button Loading state */
   loaderColor: PropTypes.string,

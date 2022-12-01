@@ -12,6 +12,8 @@ import QualitySectionWrapper from './qualitySection.style';
 
 import data from 'common/data/Agency';
 import Button from 'common/components/Button';
+import colors from 'common/theme/agency/colors';
+
 
 
 const ProductSection = ({
@@ -36,14 +38,14 @@ const ProductSection = ({
 }) => {
 
   return (
-    <QualitySectionWrapper id={id}>
+    <QualitySectionWrapper id={id} >
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col} {...textArea}>
             <FeatureBlock
               title={
                 <Heading
-                style={{fontWeight:500,color:"#aa251d"}}
+                style={{fontWeight:500,color:"#aa251d",fontSize:48}}
                   content={title}
                   {...title}
                 />
@@ -80,14 +82,17 @@ const ProductSection = ({
             </Box>
           ))}
           {link &&          
-                <Fragment>
+                <div style={{width:'100%',display:'flex',justifyContent:'center'}} >
                     <Button
+                      className="blob red"
+                      isUnderlined
+                      style={{width:'min-content',padding:"8px", whiteSpace:'nowrap',color:colors.headingColor}}
                       title="SEE OUR WEBSITE"
                       variant="textButton"
                       icon={<i className="flaticon-next" />}
                       onClick={()=>window.open(link,'_blank')}
                     />
-                </Fragment>}
+                </div>}
         </Box>
       </Container>
     {featureImage &&      

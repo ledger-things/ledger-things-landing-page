@@ -17,6 +17,9 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 import FaqSection from 'containers/Agency/FaqSection';
 import FeatureImage from '../common/assets/image/agency/carousel/m-1.png';
 import SKReputationImage from '../common/assets/image/agency/product/skreputation-image.webp';
+import { theme } from 'common/theme';
+import colors from 'common/theme/app/colors';
+import Divider from 'common/components/Divider';
 
 const Architecture3DVideoMp4 = "video/video-a3r.mp4"
 const Architecture3DVideoWebm = "video/video-a3r.webm"
@@ -57,15 +60,18 @@ const Agency = () => {
                 featureName="qualityFeature"
                 featureImage={FeatureImage}
                 />
+            <Divider/>
           <ProductSection 
                 id="skreputation"
                 title="SK Reputation" 
+                inverted
                 description="“I’m stealthy, like a ninja.”" 
                 subDescription="Defend and improve your digital reputation"
                 featureName="skReputationFeature"
                 featureImage={SKReputationImage}
                 link="https://www.skreputation.com/"
                 />
+              <Divider/>
           <ProductSection 
                 id="rendering3d"
                 title="Architecture 3D Rendering" 
